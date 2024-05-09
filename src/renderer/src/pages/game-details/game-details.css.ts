@@ -285,7 +285,7 @@ export const howLongToBeatCategory = style({
   gap: "4px",
   backgroundColor: vars.color.background,
   borderRadius: "8px",
-  padding: `8px 16px`,
+  padding: "8px 16px",
   border: `solid 1px ${vars.color.border}`,
 });
 
