@@ -21,8 +21,7 @@ def get_eta(status):
 
     if remaining_bytes >= 0 and status.download_rate > 0:
         return (remaining_bytes / status.download_rate) * 1000
-    else:
-        return 1
+    return 1
 
 def start_download(game_id: int, magnet: str, save_path: str):
     global torrent_handle

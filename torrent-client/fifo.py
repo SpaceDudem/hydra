@@ -20,8 +20,7 @@ class Fifo:
 
             result, data = win32file.ReadFile(self.socket_handle, bufSize)
             return data
-        else:
-            return self.socket_handle.recv(bufSize)
+        return self.socket_handle.recv(bufSize)
 
     def send_message(self, msg: str):
         if platform.system() == "Windows":
