@@ -62,8 +62,7 @@ export function GallerySlider({ gameDetails }: GallerySliderProps) {
             onMouseLeave={() => setArrowShow(false)}
             className={styles.gallerySliderAnimationContainer}
           >
-            {gameDetails.movies &&
-              gameDetails.movies.map((video: SteamMovies) => (
+            {gameDetails.movies?.map((video: SteamMovies) => (
                 <video
                   controls
                   className={styles.gallerySliderMedia}
@@ -73,8 +72,7 @@ export function GallerySlider({ gameDetails }: GallerySliderProps) {
                   <source src={video.webm.max.replace("http", "https")} />
                 </video>
               ))}
-            {gameDetails.screenshots &&
-              gameDetails.screenshots.map((image: SteamScreenshot) => (
+            {gameDetails.screenshots?.map((image: SteamScreenshot) => (
                 <img
                   className={styles.gallerySliderMedia}
                   src={image.path_full}
@@ -102,16 +100,14 @@ export function GallerySlider({ gameDetails }: GallerySliderProps) {
           </div>
 
           <div className={styles.gallerySliderPreview} ref={scrollContainerRef}>
-            {gameDetails.movies &&
-              gameDetails.movies.map((video: SteamMovies, i: number) => (
+            {gameDetails.movies?.map((video: SteamMovies, i: number) => (
                 <img
                   onClick={() => setMediaIndex(i)}
                   src={video.thumbnail}
                   className={`${styles.gallerySliderMediaPreview} ${mediaIndex === i ? styles.gallerySliderMediaPreviewActive : ""}`}
                 />
               ))}
-            {gameDetails.screenshots &&
-              gameDetails.screenshots.map(
+            {gameDetails.screenshots?.map(
                 (image: SteamScreenshot, i: number) => (
                   <img
                     onClick={() =>
