@@ -45,7 +45,7 @@ export const dodiFormatter = (title: string) =>
 export const xatabFormatter = (title: string) =>
   title
     .replace(/RePack от xatab|RePack от Decepticon|R.G. GOGFAN/, "")
-    .replace(/[\u0400-\u04FF]/g, "")
+    .replace(/[\u0400-\u04FF]/gu, "")
     .replace(/(v\.?([0-9]| )+)+([0-9]|\.|-|_|\/|[a-zA-Z]| )+/, "");
 
 export const tinyRepacksFormatter = (title: string) => title;
