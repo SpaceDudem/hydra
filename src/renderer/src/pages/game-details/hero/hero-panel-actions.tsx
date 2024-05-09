@@ -235,7 +235,7 @@ export function HeroPanelActions({
     );
   }
 
-  if (gameDetails && gameDetails.repacks.length) {
+  if (gameDetails?.repacks.length) {
     return (
       <>
         {toggleGameOnLibraryButton}
