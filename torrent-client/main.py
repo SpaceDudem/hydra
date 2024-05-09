@@ -87,11 +87,11 @@ def listen_to_socket():
         if payload['action'] == "start":
             start_download(payload['game_id'], payload['magnet'], payload['save_path'])
             continue
-        
+
         if payload['action'] == "pause":
             pause_download()
             continue
-            
+
         if payload['action'] == "cancel":
             cancel_download()
 
